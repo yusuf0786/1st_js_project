@@ -9,12 +9,6 @@ window.onresize = ()=>{
 // let myclicks = [0,0,0]
 // let clicks = myclicks.length
 
-let myobjects = {
-	button1_active: true,
-	button2_active: false,
-	button3_active: false
-}
-
 // targetting Elements
 let button1 = document.querySelector(".button1")
 let button2 = document.querySelector(".button2")
@@ -42,10 +36,15 @@ let box3_line3 = document.querySelector(".box3 p:nth-child(3) span")
 let box3_line4 = document.querySelector(".box3 p:nth-child(4) span")
 
 // initial functions
-box1_line1.classList.add("text_anim1")
-box1_line2.classList.add("text_anim2")
-box1_line3.classList.add("text_anim3")
-box1_line4.classList.add("text_anim4")
+function my_objects(parameter1, parameter2, parameter3){
+	let myobjects = {
+		button1_active: parameter1,
+		button2_active: parameter2,
+		button3_active: parameter3
+	}
+	return(myobjects)
+}
+let myobjects = my_objects(true, false, false)
 
 function myhover(){
 	myobjects.button1_active ? button1.classList.remove("button1_hover") : button1.classList.add("button1_hover")
@@ -53,6 +52,11 @@ function myhover(){
 	myobjects.button3_active ? button3.classList.remove("button1_hover") : button3.classList.add("button1_hover")
 }
 myhover()
+
+box1_line1.classList.add("text_anim1")
+box1_line2.classList.add("text_anim2")
+box1_line3.classList.add("text_anim3")
+box1_line4.classList.add("text_anim4")
 
 // making the function
 /*for(let i = 1; i <= clicks; i++){
@@ -82,10 +86,7 @@ button1.addEventListener('click', function(){
 	remove_box2lines()
 	remove_box3lines()
 	
-	myobjects.button1_active = true
-	myobjects.button2_active = false
-	myobjects.button3_active = false
-	
+	myobjects = my_objects(true, false, false)
 	myhover()
 })
 
@@ -102,10 +103,7 @@ button2.addEventListener('click', function(){
 	remove_box1lines()
 	remove_box3lines()
 	
-	myobjects.button2_active = true
-	myobjects.button1_active = false
-	myobjects.button3_active = false
-	
+	myobjects = my_objects(false, true, false)
 	myhover()
 })
 
@@ -122,10 +120,7 @@ button3.addEventListener('click', function(){
 	remove_box1lines()
 	remove_box2lines()
 	
-	myobjects.button3_active = true
-	myobjects.button1_active = false
-	myobjects.button2_active = false
-	
+	myobjects = my_objects(false, false, true)
 	myhover()
 })
 
@@ -136,14 +131,12 @@ function add_box1lines(){
 	box1_line3.classList.add("text_anim3")
 	box1_line4.classList.add("text_anim4")
 }
-
 function add_box2lines(){
 	box2_line1.classList.add("text_anim1")
 	box2_line2.classList.add("text_anim2")
 	box2_line3.classList.add("text_anim3")
 	box2_line4.classList.add("text_anim4")
 }
-
 function add_box3lines(){
 	box3_line1.classList.add("text_anim1")
 	box3_line2.classList.add("text_anim2")
@@ -158,14 +151,12 @@ function remove_box1lines(){
 	box1_line3.classList.remove("text_anim3")
 	box1_line4.classList.remove("text_anim4")
 }
-
 function remove_box2lines(){
 	box2_line1.classList.remove("text_anim1")
 	box2_line2.classList.remove("text_anim2")
 	box2_line3.classList.remove("text_anim3")
 	box2_line4.classList.remove("text_anim4")
 }
-
 function remove_box3lines(){
 	box3_line1.classList.remove("text_anim1")
 	box3_line2.classList.remove("text_anim2")
