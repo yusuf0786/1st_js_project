@@ -101,7 +101,7 @@ p span{
 
 
 
-
+/* animations */
 @keyframes text_anim {
 	0%{
 		left: 0;
@@ -167,7 +167,7 @@ p span{
 	animation-fill-mode: both;
 }
 
-
+/* media query */
 @media only screen and (max-width:1000px){
 	.tab_container{
 		font-size: 3.5rem;
@@ -183,14 +183,5 @@ p span{
 	}
 	button{
 		font-size: 3.8rem;
-	}
-}
-
-@media only screen and (max-width:550px){
-	.tab_container{
-		font-size: 4.5rem;
-	}
-	button{
-		font-size: 4.5rem;
 	}
 }
