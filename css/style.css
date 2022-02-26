@@ -6,11 +6,11 @@
 }
 
 html{
-	font-size: 58%;
+	font-size: 17px;
 }
 
 .master{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -18,10 +18,11 @@ html{
 }
 
 .tab_container{
-    width: 50%;
+	min-width: 0;
+	flex: 0 0 630px;
     display: flex;
     flex-wrap: wrap;
-	font-size: 2rem;
+	font-size: 1rem;
 }
 
 .controls{
@@ -34,7 +35,8 @@ button{
     height: 40px;
     border: 0;
     padding: 10px;
-	font-size: 2rem;
+	font-size: 1rem;
+	cursor: pointer;
 }
 
 button:nth-child(1){
@@ -91,6 +93,7 @@ p span{
 .active_button {
     background-color: #142f43;
     color: #fff;
+	cursor: default;
 }
 
 .button1_hover:hover{
@@ -168,20 +171,23 @@ p span{
 }
 
 /* media query */
-@media only screen and (max-width:1000px){
-	html{
-		font-size: 48%;
+@media only screen and (max-width:769px){
+	.tab_container {
+		transform: scale(0.8);
+		-webkit-transform: scale(0.8);
 	}
 }
 
-@media only screen and (max-width:700px){
-	html{
-		font-size: 58%;
+@media only screen and (max-width:426px){
+	.tab_container {
+		transform: scale(0.58);
+		-webkit-transform: scale(0.58);
 	}
 }
 
-@media only screen and (max-width:480px){
-	html{
-		font-size: 48%;
+@media only screen and (max-width:321px) {
+	.tab_container {
+		transform: scale(0.5);
+		-webkit-transform: scale(0.5);
 	}
 }

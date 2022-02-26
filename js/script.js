@@ -1,10 +1,10 @@
-window.onresize = ()=>{
-	let mywindowsize = window.innerWidth
-	let mynumbers = document.querySelector("html")
-	mynumbers.style.fontSize = mywindowsize/1000*39+"%"
+// window.onresize = ()=>{
+// 	let mywindowsize = window.innerWidth
+// 	let mynumbers = document.querySelector("html")
+// 	mynumbers.style.fontSize = mywindowsize/1000*39+"%"
 	
-	console.log(mynumbers)
-}
+// 	console.log(mynumbers)
+// }
 
 // let myclicks = [0,0,0]
 // let clicks = myclicks.length
